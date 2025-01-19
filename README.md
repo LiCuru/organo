@@ -10,4 +10,4 @@ Instalei e adicionei o componente react-select (o menu dropdown) e o botão de d
 
 =)
 
-Não vou me alongar muito nesse projeto porque pretendo aprender mais sobre outras coisas para enfir produzir algo que seja realmente utilizado.
+Não vou me alongar muito nesse projeto porque pretendo aprender mais sobre outras coisas para enfim produzir algo que seja realmente utilizado.
