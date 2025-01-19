@@ -8,38 +8,50 @@ function App() {
 
   const times = [
     {
-      nome: 'Front-End',
+      value: '',
+      label: '',
+    },
+    {
+      value: 'Front-End',
+      label: 'Front-End',
       corPrimaria: '#82CFFA',
       corSecundaria: '#E8F8FF',
     },
     {
-      nome: 'Data Science',
+      value: 'Data Science',
+      label: 'Data Science',
       corPrimaria: '#A6D157',
       corSecundaria: '#F0F8E2',
     },
     {
-      nome: 'Devops',
+      value: 'Devops',
+      label: 'Devops',
       corPrimaria: '#E06B69',
       corSecundaria: '#FDE7E8',
     },
     {
-      nome: 'UX e Design',
+      value: 'UX e Design',
+      label: 'UX e Design',
       corPrimaria: '#D86EBF',
       corSecundaria: '#FAE5F5',
     },
     {
-      nome: 'Mobile',
+      value: 'Mobile',
+      label: 'Mobile',
       corPrimaria: '#FEBA05',
       corSecundaria: '#FFF5D9',
     },
     {
-      nome: 'Inovação e Gestão',
+      value: 'Inovação e Gestão',
+      label: 'Inovação e Gestão',
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF',
     }
   ]
 
   const [colaboradores, setColaboradores] = useState([]);
+
+  const colaboradorDeletado = {};
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
     console.log(colaborador)
@@ -48,15 +60,20 @@ function App() {
 
   }
 
+  const deletarColaborador = (oColaborador) => {
+    setColaboradores(colaboradores.filter(colaborador => colaborador !== oColaborador))
+  }
+
   return (
     <div className="App">
       <Banner />
-      <Formulario times = {times.map(time => time.nome)} aoColaboradorCadastrado = {aoNovoColaboradorAdicionado} />
+      <Formulario times = {times} aoColaboradorCadastrado = {aoNovoColaboradorAdicionado} />
         {times.map((time) => 
-          <Time 
-            nome={time.nome}
-            key={time.nome}
-            colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}
+          <Time
+            nome={time.value}
+            key={time.value}
+            deletarColaborador = {deletarColaborador}
+            colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.value)}
             corPrimaria = {time.corPrimaria}
             corSecundaria = {time.corSecundaria}
           />)}

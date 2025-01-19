@@ -1,7 +1,7 @@
 .time { 
     text-align: center;
     padding: 32px;
-    background-color: #D9F7E9;
+    background-color: #D9F7E9
 }
 
 .time h3 {
@@ -9,4 +9,8 @@
     border-bottom: 4px solid #57C278;
     display: inline-block;
     padding-bottom: 8px;
+}
+
+.colaboradorContainer{
+    display: flex;
 }
