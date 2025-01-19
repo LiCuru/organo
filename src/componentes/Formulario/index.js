@@ -51,7 +51,7 @@ const Formulario = (props) => {
                     aoAlterado = {oValor => setCargo(oValor)} />
                 <CampoTexto 
                     label="Imagem" 
-                    placeholder="Digite o endereço da imagem"
+                    placeholder="https://github.com/[NomeDoUsuario].png"
                     valor = {imagem}
                     aoAlterado = {oValor => setImagem(oValor)} />
                 <ListaSuspensa 
