@@ -8,10 +8,6 @@ function App() {
 
   const times = [
     {
-      value: '',
-      label: '',
-    },
-    {
       value: 'Front-End',
       label: 'Front-End',
       corPrimaria: '#82CFFA',
